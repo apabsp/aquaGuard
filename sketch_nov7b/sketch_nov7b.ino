@@ -13,8 +13,7 @@ const int boiaPin = 3;
 void setup()
 {
   pinMode(boiaPin, INPUT_PULLUP);
-  lcd.init();                      // initialize the lcd 
-  // Print a message to the LCD.
+  lcd.init();                      
   lcd.backlight();
   lcd.setCursor(3,0);
   lcd.print("Hello, world!");
@@ -27,7 +26,7 @@ void loop()
   if (estadoBoia == true){
     lcd.setCursor(0, 1);
     lcd.begin(16, 2);
-    lcd.print("De Boa");
+    lcd.print("Sem problemas na via.");
     lcd.setBacklight(1);
     
     
