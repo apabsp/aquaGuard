@@ -16,30 +16,38 @@ void setup()
   lcd.init();                      
   lcd.backlight();
   lcd.setCursor(3,0);
-  lcd.print("AquaShield");
+  lcd.print("AquaSight");
+  delay(2000);
 }
 
 
 void loop()
 {
   bool estadoBoia = digitalRead(boiaPin);
-  if (estadoBoia == true){
-    lcd.clear();
+  while (estadoBoia == true){
+
+    
     lcd.setCursor(0, 0);
     lcd.print("Sem problemas.");
     lcd.setBacklight(1);
     delay(2000);
+    estadoBoia = digitalRead(boiaPin);
+    if (estadoBoia == false){
+      lcd.clear();
+    }
     
     
   }
-  else if (estadoBoia == false){
-    lcd.clear();
+  while (estadoBoia == false){
     lcd.setCursor(0, 0);
     lcd.print("PERIGO!!! VIA");
     lcd.setCursor(0, 1);
     lcd.print("CONGESTIONADA!");
     lcd.setBacklight(1);
-    delay(2000);
+    estadoBoia = digitalRead(boiaPin);
+    if (estadoBoia == true){
+      lcd.clear();
+    }
   }
 
 }
