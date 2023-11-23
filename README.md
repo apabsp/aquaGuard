@@ -17,5 +17,5 @@ Se a mensagem for "Sem problemas na via", a via está segura para circulação.
 Realize manutenções periódicas para garantir o bom funcionamento do dispositivo.
 Verifique a alimentação de energia, a conexão dos cabos e a integridade física da bóia e do visor LCD.
 
-5. Resposta a Mensagens de Alerta:
-Ao receber a mensagem de alerta de alagamento, tome as medidas apropriadas para evitar a área afetada. Este alerta é crucial para a segurança dos motoristas.
+5. Uso das Mensagens de Alerta:
+Este alerta é crucial para a segurança dos motoristas. Ao perceber a mensagem de alerta de alagamento, tome as medidas apropriadas para evitar a área afetada.
