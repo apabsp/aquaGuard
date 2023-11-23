@@ -4,9 +4,9 @@
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 
-LiquidCrystal_I2C lcd(0x3F,16,2);  // set the LCD address to 0x27 for a 16 chars and 2 line display
+LiquidCrystal_I2C lcd(0x3F,16,2);  // coloca o address do LCD como 0x3F, 16 caracteres em 2 linhas
 
-const int boiaPin = 3;
+const int boiaPin = 3; // Aqui teremos o pino do Arduino equivalente à boia
 
 
 
@@ -14,17 +14,17 @@ void setup()
 {
   pinMode(boiaPin, INPUT_PULLUP);
   lcd.init();                      
-  lcd.backlight();
-  lcd.setCursor(3,0);
-  lcd.print("AquaSight");
+  lcd.backlight(); 
+  lcd.setCursor(3,0); // se quisermos mudar o espaçamento, seria aqui. é 3,0 porque queremos centralizar a mensagem.
+  lcd.print("AquaSight"); 
   delay(2000);
 }
 
 
 void loop()
 {
-  bool estadoBoia = digitalRead(boiaPin);
-  while (estadoBoia == true){
+  bool estadoBoia = digitalRead(boiaPin); //verificando se a boia está em pé ou não
+  while (estadoBoia == true){ // Se não estiver em pé
 
     
     lcd.setCursor(0, 0);
@@ -38,7 +38,7 @@ void loop()
     
     
   }
-  while (estadoBoia == false){
+  while (estadoBoia == false){ // Se estiver em pé
     lcd.setCursor(0, 0);
     lcd.print("PERIGO!!! VIA");
     lcd.setCursor(0, 1);
