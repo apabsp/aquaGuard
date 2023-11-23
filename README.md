@@ -1,4 +1,6 @@
 ReadMe - artefato AquaSight para Alerta de Alagamento
+
+
 Instruções do Usuário:
 1. Posicionamento:
 Certifique-se de posicionar o artefato eletrônico a uma distância de 250 metros do ponto de alagamento identificado como hotspot. O local estratégico de instalação é crucial para garantir alertas precisos e tempestivos.
