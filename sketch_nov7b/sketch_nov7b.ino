@@ -1,10 +1,8 @@
-//YWROBOT
-//Compatible with the Arduino IDE 1.0
-//Library version:1.1
+//Utiliza a biblioteca “Liquid Crystal i2c” de Frank de Brabander.
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 
-LiquidCrystal_I2C lcd(0x3F,16,2);  // coloca o address do LCD como 0x3F, 16 caracteres em 2 linhas
+LiquidCrystal_I2C lcd(0x3F,16,2);  // coloca o address do LCD como 0x3F, 16 caracteres em 2 linhas. Prestar atenção no address certo.
 
 const int boiaPin = 3; // Aqui teremos o pino do Arduino equivalente à boia
 
