@@ -26,7 +26,7 @@ void loop()
 
     
     lcd.setCursor(0, 0);
-    lcd.print("Sem problemas.");
+    lcd.print("Baixo Risco");
     lcd.setBacklight(1);
     delay(2000);
     estadoBoia = digitalRead(boiaPin);
@@ -40,7 +40,7 @@ void loop()
     lcd.setCursor(0, 0);
     lcd.print("PERIGO!!! VIA");
     lcd.setCursor(0, 1);
-    lcd.print("CONGESTIONADA!");
+    lcd.print("ALAGADA!");
     lcd.setBacklight(1);
     estadoBoia = digitalRead(boiaPin);
     if (estadoBoia == true){
