@@ -16,12 +16,12 @@ void setup()
   lcd.setCursor(3,0); // se quisermos mudar o espaçamento, seria aqui. é 3,0 porque queremos centralizar a mensagem.
   lcd.print("AquaSight"); 
   delay(2000);
+  bool estadoBoia = digitalRead(boiaPin); //verificando se a boia está em pé ou não
 }
 
 
 void loop()
 {
-  bool estadoBoia = digitalRead(boiaPin); //verificando se a boia está em pé ou não
   while (estadoBoia == true){ // Se não estiver em pé
 
     
@@ -30,7 +30,7 @@ void loop()
     lcd.setBacklight(1);
     delay(2000);
     estadoBoia = digitalRead(boiaPin);
-    if (estadoBoia == false){
+    if (estadoBoia == false){ // Quero checar o estado da boia em todo loop, pois, caso mude, preciso limpar o LCD antes de enviar pro outro while
       lcd.clear();
     }
     
@@ -43,7 +43,7 @@ void loop()
     lcd.print("ALAGADA!");
     lcd.setBacklight(1);
     estadoBoia = digitalRead(boiaPin);
-    if (estadoBoia == true){
+    if (estadoBoia == true){ // Quero checar o estado da boia em todo loop, pois, caso mude, preciso limpar o LCD antes de enviar pro outro while
       lcd.clear();
     }
   }
