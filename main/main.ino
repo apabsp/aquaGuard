@@ -5,7 +5,7 @@
 LiquidCrystal_I2C lcd(0x3F,16,2);  // coloca o address do LCD como 0x3F, 16 caracteres em 2 linhas. Prestar atenção no address certo.
 
 const int boiaPin = 3; // Aqui teremos o pino do Arduino equivalente à boia
-
+bool estadoBoia = true;
 
 
 void setup()
@@ -16,7 +16,8 @@ void setup()
   lcd.setCursor(3,0); // se quisermos mudar o espaçamento, seria aqui. é 3,0 porque queremos centralizar a mensagem.
   lcd.print("AquaSight"); 
   delay(2000);
-  bool estadoBoia = digitalRead(boiaPin); //verificando se a boia está em pé ou não
+  estadoBoia = digitalRead(boiaPin); //verificando se a boia está em pé ou não
+  lcd.clear();
 }
 
 
